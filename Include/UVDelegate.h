@@ -26,6 +26,6 @@
 /**
  Called after send button tap
  */
-- (void)userVoideDidTapSendButton;
+- (void)userVoiceDidTapSendButton;
 
 @end

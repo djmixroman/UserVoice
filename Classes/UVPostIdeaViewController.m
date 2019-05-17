@@ -207,8 +207,8 @@
 - (void)sendWithEmail:(NSString *)email name:(NSString *)name fields:(NSDictionary *)fields {
     if (_sending) return;
     
-    if ([[UserVoice delegate] respondsToSelector:@selector(userVoideDidTapSendButton)]) {
-        [[UserVoice delegate] userVoideDidTapSendButton];
+    if ([[UserVoice delegate] respondsToSelector:@selector(userVoiceDidTapSendButton)]) {
+        [[UserVoice delegate] userVoiceDidTapSendButton];
     }
     
     self.userEmail = email;
