@@ -23,4 +23,9 @@
  */
 - (void)userVoiceRequestsDismissal;
 
+/**
+ Called after send button tap
+ */
+- (void)userVoideDidTapSendButton;
+
 @end

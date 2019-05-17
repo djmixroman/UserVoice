@@ -206,6 +206,11 @@
 
 - (void)sendWithEmail:(NSString *)email name:(NSString *)name fields:(NSDictionary *)fields {
     if (_sending) return;
+    
+    if ([[UserVoice delegate] respondsToSelector:@selector(userVoideDidTapSendButton)]) {
+        [[UserVoice delegate] userVoideDidTapSendButton];
+    }
+    
     self.userEmail = email;
     self.userName = name;
     if (email.length == 0) {

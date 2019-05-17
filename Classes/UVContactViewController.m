@@ -152,6 +152,11 @@
 
 - (void)sendWithEmail:(NSString *)email name:(NSString *)name fields:(NSDictionary *)fields {
     if (_sending) return;
+    
+    if ([[UserVoice delegate] respondsToSelector:@selector(userVoideDidTapSendButton)]) {
+        [[UserVoice delegate] userVoideDidTapSendButton];
+    }
+    
     NSMutableDictionary *customFields = [NSMutableDictionary dictionary];
     for (NSString *key in fields.allKeys) {
         customFields[key] = fields[key][@"label"];
